@@ -1,0 +1,63 @@
+<div class="cointainer">
+    <h3>Contact Information</h3>
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+        <h4>Reference</h4>
+        <div class = "form-group">
+            <label for="rfirstname">Name</label><br>
+            <input #rname="ngModel" required type="text" name = "rname" class="form-control" [(ngModel)]="contact[0].name" ngModel>
+            <div *ngIf = "rname.touched && rname.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="rphone">Phone</label><br>
+            <input #rphone="ngModel" required type="text" name = "rphone" class="form-control" [(ngModel)]="contact[0].phone" ngModel>
+            <div *ngIf = "rphone.touched && rphone.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="raddress">Address</label><br>
+            <input #raddress="ngModel" required type="text" name = "raddress" class="form-control" [(ngModel)]="contact[0].address" ngModel>
+            <div *ngIf = "raddress.touched && raddress.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="remail">Email</label><br>
+            <input #remail="ngModel" required type="text" name = "remail" class="form-control" [(ngModel)]="contact[0].email" ngModel>
+            <div *ngIf = "remail.touched && remail.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="rrelationship">Relationship</label><br>
+            <input #rrelationship="ngModel" required type="text" name = "rrelationship" class="form-control" [(ngModel)]="contact[0].relationship" ngModel>
+            <div *ngIf = "rrelationship.touched && rrelationship.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+
+
+        <div class = "form-group" [formGroup]="productForm">
+            <h4>Emergency</h4>
+            <pre></pre>
+            <div formArrayName="econtacts">
+                <button type="button" (click)="addEContact()" class="btn btn-primary">Add More</button>
+                <div class = "form-group" *ngFor="let quantity of econtacts().controls; let i=index" [formGroupName]="i">
+                    <label for="ename">First Name</label><br>
+                    <input required type="text" name = "ename" formControlName="ename" class="form-control">
+                    <label for="ephone">Phone</label><br>
+                    <input required type="text" name = "ephone" formControlName="ephone" class="form-control">
+                    <label for="eaddress">Address</label><br>
+                    <input required type="text" name = "eaddress" formControlName="eaddress" class="form-control">
+                    <label for="eemail">Email</label><br>
+                    <input required type="text" name = "eemail" formControlName="eemail" class="form-control">
+                    <label for="erelationship">Relationship</label><br>
+                    <input required type="text" name = "erelationship" formControlName="erelationship" class="form-control"> 
+                    <pre></pre>
+                    <button (click)="removeEContact(i)" class="btn btn-danger">Remove</button>
+                </div>
+                <pre></pre>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

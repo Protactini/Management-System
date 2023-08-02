@@ -1,0 +1,92 @@
+<div class="cointainer">
+    <h3>Basic Information</h3>
+    <form #basic="ngForm" (ngSubmit)="submit(basic)">
+        <div class = "form-group">
+            <label for="firstname">First Name</label><br>
+            <input #firstname="ngModel" required type="text" name = "firstname" class="form-control" [(ngModel)]="person.firstName" ngModel>
+            <div *ngIf = "firstname.touched && firstname.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="password">Last Name</label><br>
+            <input #lastname="ngModel" required type="text" name = "lastname" class="form-control" [(ngModel)]="person.lastName" ngModel>
+            <div *ngIf = "lastname.touched && lastname.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="middlename">Middle Name</label><br>
+            <input #middlename="ngModel" required type="text" name = "middlename" class="form-control" [(ngModel)]="person.middleName" ngModel>
+            <div *ngIf = "middlename.touched && middlename.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="middlename">Email</label><br>
+            <input #email="ngModel" type="text" name = "email" class="form-control" [(ngModel)]="person.email" readonly ngModel>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="cellphone">Cell Phone</label><br>
+            <input #cellphone="ngModel" required type="text" name = "cellphone" class="form-control" [(ngModel)]="person.cellPhone" ngModel>
+            <div *ngIf = "cellphone.touched && cellphone.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="alternatephone">Alternate Phone</label><br>
+            <input #alternatephone="ngModel" type="text" name = "alternatephone" class="form-control" [(ngModel)]="person.alternatePhone" ngModel>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="gender">Gender</label><br>
+            <select #gender="ngModel" name = "gender" class="form-control" [(ngModel)]="person.gender" ngModel>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="I do not want to answer">I do not want to answer</option>
+            </select>
+            <div *ngIf = "gender.touched && gender.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="ssn">SSN</label><br>
+            <input #ssn="ngModel" required type="text" name = "ssn" class="form-control" [(ngModel)]="person.ssn" ngModel>
+            <div *ngIf = "ssn.touched && ssn.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="dob">Date of Birth</label><br>
+            <input #dob="ngModel" required type="date" name = "dob" class="form-control" [(ngModel)]="person.dob" ngModel>
+            <div *ngIf = "dob.touched && dob.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <h3>Address</h3>
+        <div class = "form-group">
+            <label for="addline1">Address Line 1</label><br>
+            <input #addline1="ngModel" required type="text" name = "addline1" class="form-control" [(ngModel)]="address.addressLine1" ngModel>
+            <div *ngIf = "addline1.touched && addline1.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="addline2">Address Line 2</label><br>
+            <input #addline2="ngModel" type="text" name = "addline2" class="form-control" [(ngModel)]="address.addressLine2" ngModel>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="city">City</label><br>
+            <input #city="ngModel" required type="text" name = "city" class="form-control" [(ngModel)]="address.city" ngModel>
+            <div *ngIf = "city.touched && city.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="zip">Zip Code</label><br>
+            <input #zip="ngModel" required type="text" name = "zip" class="form-control" [(ngModel)]="address.zipCode" ngModel>
+            <div *ngIf = "zip.touched && zip.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="state">State Name</label><br>
+            <input #state="ngModel" required type="text" name = "state" class="form-control" [(ngModel)]="address.stateName" ngModel>
+            <div *ngIf = "state.touched && state.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit" [disabled]="!basic.valid">Next</button>
+    </form>
+</div>

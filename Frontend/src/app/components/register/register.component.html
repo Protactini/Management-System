@@ -1,0 +1,18 @@
+<div class="cointainer">
+    <h3>Registration</h3>
+    <form #registration="ngForm" (ngSubmit)="submit(registration)">
+        <div class = "form-group">
+            <label for="username">Username</label><br>
+            <input #username="ngModel" required type="text" name = "username" class="form-control" ngModel>
+            <div *ngIf = "username.touched && username.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="password">Password</label><br>
+            <input #password="ngModel" required type="text" name = "password" class="form-control" ngModel>
+            <div *ngIf = "password.touched && password.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>

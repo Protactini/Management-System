@@ -1,0 +1,66 @@
+<mat-form-field appearance="standard">
+  <mat-label>Search</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="name" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Full Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.firstName}} {{row.middleName == null ? " " : row.middleName}} {{row.lastName}}</td>
+<!--      <td mat-cell *matCellDef="let row"> {{person[row.id - 1].firstName}} {{person[row.id - 1].middleName == null ? " " : person[row.id - 1].middleName}} {{person[row.id - 1].lastName}}</td>-->
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="work">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Work Authorization </th>
+      <td mat-cell *matCellDef="let row"> {{visaStatus[row.userId].visaType}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="expiration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Expiration Date </th>
+      <td mat-cell *matCellDef="let row"> {{visaStatus[row.userId - 1].visaEndDate}} </td>
+    </ng-container>
+
+    <!-- Fruit Column -->
+    <ng-container matColumnDef="left">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Day Left </th>
+      <td mat-cell *matCellDef="let row"> {{dayLeft[row.userId - 1] >= 0 ? dayLeft[row.userId - 1] : null}} </td>
+    </ng-container>
+
+    <!-- I-983 Column -->
+    <ng-container matColumnDef="i983">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> I-983 </th>
+<!--      <td mat-cell *matCellDef="let row"> {{row.i983}} </td>-->
+      <td mat-cell *matCellDef="let row">
+
+        <button mat-stroked-button color="primary" (click)="openDialog(row.id)">Upload</button>
+
+        <button mat-stroked-button (click)="onDownload(row.id)">Download</button>
+        <a *ngIf="profileUrl" mat-stroked-button [href]="profileUrl | async" target="_blank" style="margin-right: 20px;">I-983</a>
+
+<!--        <a mat-stroked-button [href]=urls[row.id] target="_blank">Download</a></td>-->
+<!--      <a *ngIf="profileUrl6 | async" mat-stroked-button [href]="profileUrl6 | async" target="_blank">OPT STEM EAD</a>-->
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+      <td mat-cell *matCellDef="let row"> <button mat-stroked-button color="accent" (click)="onClick()">Send Notification</button> </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>

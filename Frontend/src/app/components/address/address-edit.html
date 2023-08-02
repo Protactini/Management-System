@@ -1,0 +1,26 @@
+<form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="hidden" formControlName="id" placeholder="{{data.id}}" name="id" id="id">
+  </div>
+  <div class="form-group">
+    <label>Address Line 1:</label>
+    <input type="text" formControlName="addressLine1" value="{{data.addressLine1}}" placeholder="{{data.addressLine1}}" name="addressLine1" id="addressLine1">
+  </div>
+  <div class="form-group">
+    <label>Address Line 2:</label>
+    <input type="text" formControlName="addressLine2" value="{{data.addressLine2}}" placeholder="{{data.addressLine2}}" name="addressLine2" id="addressLine2">
+  </div>
+  <div class="form-group">
+    <label>City:</label>
+    <input type="text" formControlName="city" value="{{data.city}}" placeholder="{{data.city}}" name="city" id="city">
+  </div>
+  <div class="form-group">
+    <label>Zip Code:</label>
+    <input type="text" formControlName="zipCode" value="{{data.zipCode}}" placeholder="{{data.zipCode}}" name="zipCode" id="zipCode">
+  </div>
+  <br/>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button  cdkFocusInitial>Done</button>
+  </div>
+</form>

@@ -1,0 +1,17 @@
+<p>upload-page works!</p>
+<div>
+  <label for="formFileLg" class="form-label">Large file input example</label>
+  <input
+    class="form-control form-control-lg"
+    id="formFileLg"
+    type="file"
+    (change)="selectFile($event)"
+  />
+  <button
+    class="btn btn-success"
+    [disabled]="!selectedFiles"
+    (click)="upload()"
+  >
+    Upload
+  </button>
+</div>

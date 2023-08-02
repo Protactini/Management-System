@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>Address Line 1</mat-card-title>
+  <mat-card-subtitle>{{address.addressLine1}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Address Line 2</mat-card-title>
+  <mat-card-subtitle>{{address.addressLine2}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>City</mat-card-title>
+  <mat-card-subtitle>{{address.city}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Zip Code</mat-card-title>
+  <mat-card-subtitle>{{address.zipCode}}</mat-card-subtitle>
+</mat-card>
+<button mat-raised-button color="primary" class="btn" (click)="openDialog()" style="margin-left: 80px">Edit</button>

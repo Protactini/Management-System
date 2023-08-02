@@ -1,0 +1,18 @@
+.mat-card-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mat-card {
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  position: relative;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+.mat-card-title {
+  display: block;
+  margin-bottom: 4px;
+}

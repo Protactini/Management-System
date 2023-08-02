@@ -1,0 +1,52 @@
+<p>house works!</p>
+
+
+<!--<form method="post">-->
+<!--  <input placeholder="name" type="text" >-->
+<!--  <input placeholder="email" type="email" >-->
+<!--  <input placeholder="phone" type="text" >-->
+<!--<label for="myfile">Select a file:</label>-->
+<!--<input type="file" id="myfile" name="myfile">-->
+<!--  <button type="submit"> submit </button>-->
+<!--</form>-->
+
+
+<!--<form  [formGroup]="addForm" (ngSubmit)="onSubmit()">-->
+<!--  <div class="form-group">-->
+
+<!--    <input type="text"formControlName="name" placeholder="name" name="name" id="name">-->
+<!--  </div>-->
+<!--  <br/>-->
+
+<!--  <div class="form-group">-->
+
+<!--    <input type="email" formControlName="email" placeholder="email" name="email" id="email">-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+
+<!--    <input type="text" formControlName="phone" placeholder="phone" name="phone" id="phone">-->
+<!--  </div>-->
+
+<!--  <br/>-->
+<!--  <button class="btn btn-success">Add</button>-->
+<!--</form>-->
+
+
+<!--Modal-->
+<form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+<ol>
+  <li>
+    <mat-form-field appearance="fill">
+      <mat-label>What's your name?</mat-label>
+      <input matInput [(ngModel)]="aaa">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li>
+</ol>
+</form>

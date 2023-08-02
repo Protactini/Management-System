@@ -1,0 +1,527 @@
+[33mcommit 873218cecf1a9232f92d03db5c1f87be98baed8d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mphong-branch[m[33m)[m
+Merge: 59b7e94 099a6b5
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Mon Jan 24 20:05:55 2022 -0800
+
+    Merge pull request #40 from mesterpeter75/phong-branch
+    
+    Improve hire section
+
+[33mcommit 099a6b5ba60c4eaea5b332c9d07c3e691b32043b[m[33m ([m[1;31morigin/phong-branch[m[33m)[m
+Merge: e25e13d 59b7e94
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Mon Jan 24 20:05:44 2022 -0800
+
+    Merge branch 'main' into phong-branch
+
+[33mcommit e25e13d3909ce2e4303ceea1b76278bc2ca29fcd[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Mon Jan 24 12:00:57 2022 -0800
+
+    Improve hire section
+
+[33mcommit 59b7e94902b922b72c89ae18abbb42db81c85064[m
+Merge: d401b5c 04c0984
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Mon Jan 24 12:00:20 2022 -0800
+
+    Merge pull request #39 from mesterpeter75/joshua-new
+    
+    auth guard to direct users based on their role id
+
+[33mcommit 04c0984efb4bfcc12659a8877f1fc22ed1885fb8[m[33m ([m[1;31morigin/joshua-new[m[33m)[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 24 11:11:22 2022 -0500
+
+    auth guard to direct users based on their role id
+
+[33mcommit d401b5ce362e52169f6d40aff081f0144aa76bf2[m
+Merge: 8c68a4b d97bcdf
+Author: juicehan <39466164+juicehan@users.noreply.github.com>
+Date:   Sun Jan 23 19:54:17 2022 -0500
+
+    Merge pull request #38 from mesterpeter75/phong-branch
+    
+    Phong branch
+
+[33mcommit d97bcdf0ac447c783a332e1fa06f0cd95e042925[m
+Merge: 3d857f2 8c68a4b
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 23 16:50:48 2022 -0800
+
+    Fix auth server not working
+
+[33mcommit 3d857f26df28f933251ef268f3c0490175902073[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 23 14:41:56 2022 -0800
+
+    Improve hr hire
+
+[33mcommit 8c68a4b9a01db8eec9ee117bff59d12e496bb958[m
+Merge: b6d1f64 17e9e9e
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 23 13:37:15 2022 -0700
+
+    Merge remote-tracking branch 'origin/main' into main
+
+[33mcommit b6d1f643447ca74d668574147d761270f07f3e07[m
+Merge: 3d2e95f 45c365b
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 23 13:34:58 2022 -0700
+
+    Merge branch 'Alex' into main
+
+[33mcommit abada0658e976e73d3c651c8a7db56e9cba45c80[m
+Merge: 51f7cc0 17e9e9e
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 23 12:02:35 2022 -0800
+
+    Merge branch 'main' of https://github.com/mesterpeter75/W7PG2-Management-System into phong-branch
+
+[33mcommit 17e9e9edc4bac596791ba05ed7dff9d1056e66da[m
+Merge: 3d2e95f f9f1980
+Author: Protactini <56206430+Protactini@users.noreply.github.com>
+Date:   Sun Jan 23 12:42:34 2022 -0700
+
+    Merge pull request #35 from mesterpeter75/phong-branch
+    
+    Add service for application workflow, and add improvements to registration
+
+[33mcommit f9f1980c7f1879a6f6936ec7ebfaea7fdcdad72e[m
+Merge: f728530 3d2e95f
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Sun Jan 23 11:37:04 2022 -0800
+
+    Merge branch 'main' into phong-branch
+
+[33mcommit 51f7cc0c09600fbe5cc9d862a5f40b3b3ed34ec5[m
+Merge: f728530 3d2e95f
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 23 11:27:40 2022 -0800
+
+    Merge branch 'main' of https://github.com/mesterpeter75/W7PG2-Management-System into phong-branch
+
+[33mcommit f728530c456c505c4a8f09e36b68e461b92f2e48[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 23 11:22:55 2022 -0800
+
+    Add service for WorkApplication entity, and few improvement to registration
+
+[33mcommit 45c365bc9f834ccfd9289186857d6bbc61e9a0a4[m[33m ([m[1;31morigin/Alex[m[33m)[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 23 00:56:08 2022 -0700
+
+    Hr visa function
+
+[33mcommit 92d5cd1a47748ffe02a439b0e6fc19e4acc29f56[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sat Jan 22 02:08:39 2022 -0700
+
+    Add employee visa function
+
+[33mcommit b0091a8529d34e93b6ba71a083a343ac9572e723[m
+Merge: bf74183 583a420
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Fri Jan 21 21:10:27 2022 -0800
+
+    Merge branch 'Joshua' of https://github.com/mesterpeter75/W7PG2-Management-System into phong-branch
+
+[33mcommit 583a42033b82fbf74bf99484b6b8f8a9b1c72b6d[m
+Author: juicehan <39466164+juicehan@users.noreply.github.com>
+Date:   Fri Jan 21 23:38:08 2022 -0500
+
+    Delete .DS_Store
+
+[33mcommit ecc055e235eb2d0143bda3479dfddd031eef280b[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Fri Jan 21 23:35:13 2022 -0500
+
+    latest
+
+[33mcommit 3d2e95f0d2a25a73dbc62ce0ae2ba9c7a6a91376[m
+Merge: 01b0117 bf74183
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Fri Jan 21 19:38:27 2022 -0800
+
+    Merge pull request #33 from mesterpeter75/phong-branch
+    
+    Merge HR backend into main backend
+
+[33mcommit bf7418379dbf915f214cdd8be8c10ef21d2d0bdc[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Fri Jan 21 19:37:18 2022 -0800
+
+    Merge HR backend into main backend
+
+[33mcommit 7f73afdaad604c4924a658912a9e079d878646ea[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Fri Jan 21 09:40:24 2022 -0500
+
+    login service and components adjusted
+
+[33mcommit 607f5ca3a321a0ad5f834361fecbf5bd0fff0e64[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Fri Jan 21 09:21:50 2022 -0500
+
+    minor fixes
+
+[33mcommit 57d63e33df04e6dc69d03da3d6d98a678f30445a[m
+Merge: e7bb3ab 01b0117
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Fri Jan 21 09:19:35 2022 -0500
+
+    auth front end
+
+[33mcommit c25ee55fa2f1abaf162a3fa8473b94d48e634fe3[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Fri Jan 21 00:33:35 2022 -0700
+
+    Add link to database
+
+[33mcommit 3a09ec696176f197a71b8741d61bdf078090a1fa[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Thu Jan 20 23:41:12 2022 -0700
+
+    File Upload
+
+[33mcommit e7bb3ab39231be465521bbea5d617d5d2b8c4ffe[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Thu Jan 20 18:37:54 2022 -0500
+
+    auth server frontend
+
+[33mcommit 01b01170e5811a6006dc2f8fd50c87de3952d41a[m
+Merge: 9edb99f 7d404a4
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Thu Jan 20 15:32:14 2022 -0800
+
+    Merge pull request #32 from mesterpeter75/phong-branch
+    
+    Add onboarding feature for employee
+
+[33mcommit 7d404a4bd7af7b03320d32659979b2567e79763c[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Thu Jan 20 15:25:28 2022 -0800
+
+    Fix auth server
+
+[33mcommit 3b4df6c2c827194c81af833c8e875cbb33a90c4d[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Thu Jan 20 13:54:30 2022 -0800
+
+    Add onboarding feature for employee
+
+[33mcommit 6a00849a41c4706d896d0d10e946a54cc8f62fe4[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Thu Jan 20 02:11:18 2022 -0700
+
+    Personal Page Function
+    
+    finish the edit function of personal page, so the main function of this page is finished , now only need to extension this function to all sub components.
+
+[33mcommit e1ea37c7e4162727262a2f4edc62713c7f6183ea[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Wed Jan 19 23:06:34 2022 -0500
+
+[33mcommit c20db072b04c602da4f198465480654bbf858193[m
+Merge: f4b2d17 9edb99f
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Wed Jan 19 20:17:53 2022 -0700
+
+    Merge branch 'main' into Alex
+
+[33mcommit 316ceeba7adb59a0b3c01b2353c104b5025d08b7[m
+Merge: 5fcf80f 9edb99f
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Wed Jan 19 20:15:36 2022 -0500
+
+    Merge branch 'main' of https://github.com/mesterpeter75/W7PG2-Management-System into Joshua
+
+[33mcommit 5fcf80f9697c878580e4dfb28b4bcc5c6d35c401[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Wed Jan 19 17:31:35 2022 -0500
+
+    fixes
+
+[33mcommit 9edb99fbafbf2f8c270c850f0c474c0cc7966325[m
+Merge: 628aceb c5e3617
+Author: juicehan <39466164+juicehan@users.noreply.github.com>
+Date:   Wed Jan 19 17:24:37 2022 -0500
+
+    Merge pull request #21 from mesterpeter75/phong-branch
+    
+    Phong branch
+
+[33mcommit c5e36172239cae4063b27288283b29f4fb8d7091[m
+Merge: 89454e4 628aceb
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Wed Jan 19 14:05:31 2022 -0800
+
+    Merge branch 'main' of https://github.com/mesterpeter75/W7PG2-Management-System into phong-branch
+
+[33mcommit 89454e4f231c666764455390213ff289959c3e39[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Wed Jan 19 14:05:19 2022 -0800
+
+    Combine phong and alex's branch
+
+[33mcommit 628aceb912992c7c675d6b71fd9d149c8e605890[m
+Merge: 8198e7e b3dd1c2
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Wed Jan 19 13:45:12 2022 -0800
+
+    Merge pull request #20 from mesterpeter75/Joshua
+    
+    login finished but not tested yet
+
+[33mcommit 1ff192798f080424332c2c88139cdef059d93bbb[m
+Merge: c0be7d5 f4b2d17
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Wed Jan 19 07:50:28 2022 -0800
+
+    Resolve some conflict 1/19
+
+[33mcommit b3dd1c2f90af3b1b5a66da334ee8cbbafa09e85c[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Wed Jan 19 10:26:07 2022 -0500
+
+    login finished but not tested yet
+
+[33mcommit c0be7d5212805f83bf7e1a8373f4380bf22ade73[m
+Merge: 486887c 4ee5efc
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Wed Jan 19 06:48:29 2022 -0800
+
+    Merge branch 'phong-branch' of https://github.com/mesterpeter75/W7PG2-Management-System into phong-branch
+
+[33mcommit 486887cb8686729a6468da223494a57289aeb9de[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Wed Jan 19 06:48:12 2022 -0800
+
+    Add front end for register
+
+[33mcommit 4ee5efcb682dfba7ba1ef301d62f92a92a6756bc[m
+Merge: d7e34f9 8198e7e
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Wed Jan 19 06:26:21 2022 -0800
+
+    Merge pull request #19 from mesterpeter75/main
+    
+    Daniel
+
+[33mcommit f4b2d17192533713d7a4710f1886160a215810c4[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Tue Jan 18 23:41:27 2022 -0700
+
+    Build  Connection
+    
+    Hibernate connection to database, Connection between Angular and Hibernate
+
+[33mcommit c5da2862f16f7be1cc917430b4e156703e632c4b[m
+Merge: d70e3ff 8198e7e
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Tue Jan 18 00:53:42 2022 -0700
+
+    Merge remote-tracking branch 'origin/main' into Alex
+
+[33mcommit 8198e7eb147756c415fcf1c39d2824150c02e4f9[m
+Merge: 9c5949e 89081b7
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Mon Jan 17 21:08:20 2022 -0800
+
+    Merge pull request #17 from mesterpeter75/Joshua
+    
+    Joshua
+
+[33mcommit 89081b72021178648939b8e7c884dfc92a546027[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 22:58:02 2022 -0500
+
+    updated service with create
+
+[33mcommit d70e3ff90f69d5f4bcb5fbc2fc71a0dda0b37fd2[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Mon Jan 17 20:46:56 2022 -0700
+
+    1/17
+    
+    add nav, routing and cards in angular for  personal information
+
+[33mcommit 38f2eb45c376d3e84017702aae906c80763f4df1[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 22:46:47 2022 -0500
+
+    login controller
+
+[33mcommit e67b84a2e5dd92d12105f20450ce2b7cb5584541[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 21:51:07 2022 -0500
+
+    login controller
+
+[33mcommit 70eff648b4141975fbbaada71eac4fe7cf80ea64[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 21:07:26 2022 -0500
+
+    added create method
+
+[33mcommit bde80b7445f8ae914d224bedc4d69832f55735ea[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 18:07:45 2022 -0500
+
+    token, and cookies should work if called and working on controller
+
+[33mcommit e990a132452b3496f82765eba9a8375e37e4efd9[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 13:38:36 2022 -0500
+
+    user dao finalisation and setup for application.properties
+
+[33mcommit 9822b1d24669ac19e7c64bb54ec60bfddf35a28f[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Mon Jan 17 11:49:08 2022 -0500
+
+    db hibernate configuration files
+
+[33mcommit 7c3119c2579a567c701dae8824f22dc62d18e34b[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 16 18:04:26 2022 -0700
+
+    Person Information Page Structure
+
+[33mcommit 85d73399bdea145217882e91e0d2e57a7193b077[m
+Merge: 5533da3 9c5949e
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 16 13:59:38 2022 -0700
+
+    Merge branch 'main' into Alex
+
+[33mcommit 5533da3cfa26415d525f3fbec5778db0a9995eb3[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sun Jan 16 13:57:47 2022 -0700
+
+    Add Hibernate Config
+
+[33mcommit 9c5949e271142e51f06d0f092d17c41192ce02d3[m
+Merge: 8cec044 21c3099
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Sun Jan 16 08:18:54 2022 -0800
+
+    Merge pull request #16 from mesterpeter75/Joshua
+    
+    minor modifications made to user dao
+
+[33mcommit 21c3099e959635b6cb739e1645b377f626353153[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Sun Jan 16 11:15:29 2022 -0500
+
+    minor modifications made to user dao
+
+[33mcommit 8cec044d6cd03f05dc21a38426df6202ef3f9cb1[m
+Merge: 9b25d4f d7e34f9
+Author: juicehan <39466164+juicehan@users.noreply.github.com>
+Date:   Sun Jan 16 11:09:58 2022 -0500
+
+    Merge pull request #15 from mesterpeter75/phong-branch
+    
+    Add abstract hibernate class to auth server
+
+[33mcommit d7e34f91ed7a144274cf2d52d1121b9d060c89c8[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 16 08:06:33 2022 -0800
+
+    Add abstract hibernate class to auth server
+
+[33mcommit 9b25d4fb8be5fff5cc84f3376a1952fcc70d96e8[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 16 08:02:21 2022 -0800
+
+    Add hibernate dependency for auth server
+
+[33mcommit 1c2cdb643e380811bf1fcf3628769798211d1876[m
+Merge: 265a6e9 624b7b5
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sun Jan 16 07:56:03 2022 -0800
+
+    Add abstract hibernate dao
+
+[33mcommit 265a6e93e6afa4a78e1ddebefbcbffb88b9dc03d[m
+Author: phong <phong2000.le@gmail.com>
+Date:   Sun Jan 16 07:51:59 2022 -0800
+
+    Add abstract hibernate dao
+
+[33mcommit 624b7b5bddb466aba41a411fcf279173339f71a3[m
+Merge: 03fe757 9f809be
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Sun Jan 16 07:43:51 2022 -0800
+
+    Merge pull request #14 from mesterpeter75/Joshua
+    
+    Joshua
+
+[33mcommit 9f809bedb3bfcb786e0c306aed4a5c51f80be978[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Sun Jan 16 10:11:36 2022 -0500
+
+    created basic dao layer
+
+[33mcommit a37b267cb3041154882b19878c82a1edee813ec9[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Sat Jan 15 23:06:03 2022 -0500
+
+    added some dao
+
+[33mcommit 4c4e6b056bb9766c5b54fdc1d58f26b57546830a[m
+Author: juicehan <joshuajuicehan@gmail.com>
+Date:   Sat Jan 15 21:53:01 2022 -0500
+
+    all the entities for auth_server created
+    
+    all the entities for auth_server created
+
+[33mcommit 7d0e6b0637a73f78fc1088c1c0e5c5933c11d625[m
+Merge: d8ed1c7 03314b1
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sat Jan 15 08:58:07 2022 -0700
+
+    Merge remote-tracking branch 'origin/Alex' into Alex
+
+[33mcommit d8ed1c76aab144a41b10c1aff4402c6b846db1cf[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sat Jan 15 08:48:37 2022 -0700
+
+    Fix some errors
+
+[33mcommit 03314b1b14969eaf33a8d496b354bf331792fe45[m
+Author: Hongzhi Zhu <protactini0819@gmail.com>
+Date:   Sat Jan 15 08:48:37 2022 -0700
+
+    Fix thr errors
+
+[33mcommit 03fe7579516e6f1984d820f998fc4ff606cbdcd8[m
+Merge: 2c97b2a fec4dce
+Author: Protactini <56206430+Protactini@users.noreply.github.com>
+Date:   Sat Jan 15 08:21:28 2022 -0700
+
+    Merge pull request #12 from mesterpeter75/phong-branch
+    
+    Add entity objects to the backend project
+
+[33mcommit fec4dceeb8003038af84d98b9e2dee5ec94b7af0[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Sat Jan 15 00:02:34 2022 -0800
+
+    Add entity objects to the backend project
+
+[33mcommit 2c97b2a68f199eaf4af258024c2f39dd8a8e10be[m
+Author: Phong Le <phong2000.le@gmail.com>
+Date:   Fri Jan 14 12:37:04 2022 -0800
+
+    Add empty project
+
+[33mcommit 781794081f7e87d38f1d0607f6bd735c1f792203[m
+Author: mesterpeter75 <63081761+mesterpeter75@users.noreply.github.com>
+Date:   Fri Jan 14 08:21:15 2022 -0800
+
+    Initial commit

@@ -1,0 +1,130 @@
+<div class="example-large-box mat-elevation-z4">
+    <h2 style="margin-left: 12px;">Visa Status</h2>
+    <mat-card>
+      <mat-card-title style="color: green">Current Status</mat-card-title>
+      <mat-card-subtitle>Started</mat-card-subtitle>
+    </mat-card>
+    <mat-card>
+      <mat-card-title style="color: darkgray">Next Step</mat-card-title>
+      <!--        <mat-card-subtitle>Submit copy of EAD card.</mat-card-subtitle>-->
+
+
+      <!-----------------------Step Process--------------------->
+      <!--        <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">-->
+      <!--          {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}-->
+      <!--        </button>-->
+      <mat-stepper [linear]="isLinear" #stepper>
+
+
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>OPT Receipt</ng-template>
+            <mat-form-field>
+              <input matInput formControlName="firstCtrl" class="input-area">
+              <input type="file" />
+            </mat-form-field>
+            <div>
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="secondFormGroup" label="OPT EAD">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput formControlName="secondCtrl" class="input-area">
+              <app-upload></app-upload>
+            </mat-form-field>
+            <div>
+
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="secondFormGroup" label="I-983">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput formControlName="secondCtrl" class="input-area">
+              <app-upload></app-upload>
+            </mat-form-field>
+            <div>
+
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="secondFormGroup" label="I-20">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput formControlName="secondCtrl" class="input-area">
+              <app-upload></app-upload>
+            </mat-form-field>
+            <div>
+
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+
+        <mat-step [stepControl]="secondFormGroup" label="OPT STEM Receipt">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput formControlName="secondCtrl" class="input-area">
+              <app-upload></app-upload>
+            </mat-form-field>
+            <div>
+
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="secondFormGroup" label="OPT STEM EAD">
+          <form [formGroup]="secondFormGroup">
+            <mat-form-field>
+              <input matInput formControlName="secondCtrl" class="input-area">
+              <app-upload></app-upload>
+            </mat-form-field>
+            <div>
+
+              <button mat-stroked-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="secondFormGroup" label="Done">
+          <p>You are now done.</p>
+        </mat-step>
+
+        <!--          <mat-step>-->
+        <!--            <ng-template matStepLabel>Done</ng-template>-->
+        <!--            <p>You are now done.</p>-->
+        <!--&lt;!&ndash;            <div>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;              <button mat-button (click)="stepper.reset()">Reset</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </div>&ndash;&gt;-->
+        <!--          </mat-step>-->
+      </mat-stepper>
+      <!-----------------------Step Process--------------------->
+
+
+
+
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Uploaded File:</mat-card-title>
+      <!--        <mat-card-subtitle><a mat-stroked-button href="{{profileUrl}}" target="_blank" >I-983</a></mat-card-subtitle>
+      <a *ngIf="profileUrl" mat-stroked-button [href]="profileUrl | async" target="_blank" style="margin-right: 20px;">I-983</a>
+      <a *ngIf="profileUrl1 | async" mat-stroked-button [href]="profileUrl1 | async" target="_blank" style="margin-right: 20px;">I-765</a>
+      <a *ngIf="profileUrl2 | async" mat-stroked-button [href]="profileUrl2 | async" target="_blank" style="margin-right: 20px;">I-20</a>
+      -->
+    </mat-card>
+
+    <button mat-raised-button color="primary" class="submit-btn">Submit</button>
+
+  </div>

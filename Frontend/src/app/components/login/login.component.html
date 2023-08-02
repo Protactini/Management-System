@@ -1,0 +1,24 @@
+<!-- <p>login works!</p> -->
+<div class="cointainer">
+    <h3>Login</h3>
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class = "form-group">
+            <label for="username">Username</label><br>
+            <input #username="ngModel" required type="text" name = "username" class="form-control" ngModel>
+            <div *ngIf = "username.touched && username.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="password">Password</label><br>
+            <input #password="ngModel" required type="text" name = "password" class="form-control" ngModel>
+            <div *ngIf = "password.touched && password.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <!-- checkbox -->
+        <div class="form-group">
+            <input #ishr="ngModel" type="checkbox" name="ishr" ngModel>
+            <label class="form-check-label" for="flexCheckDefault">HR</label>
+        </div>
+    </form>
+</div>

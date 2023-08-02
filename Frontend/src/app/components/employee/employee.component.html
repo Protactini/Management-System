@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>Work Authorization</mat-card-title>
+  <mat-card-subtitle>{{visaStatus.visaType}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Authorization Start Date</mat-card-title>
+  <mat-card-subtitle>{{visaStatus.visaStartDate}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Authorization End Date</mat-card-title>
+  <mat-card-subtitle>{{visaStatus.visaEndDate}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Employment Start Date</mat-card-title>
+  <mat-card-subtitle>{{employee.startDate}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Employment End Date</mat-card-title>
+  <mat-card-subtitle>{{employee.endDate}}</mat-card-subtitle>
+</mat-card>
+<button mat-raised-button color="primary" class="btn" (click)="openDialog()" style="margin-left: 80px">Edit</button>
+
+

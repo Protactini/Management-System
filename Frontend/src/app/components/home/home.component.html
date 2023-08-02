@@ -1,0 +1,55 @@
+<mat-tab-group dynamicHeight xmlns="http://www.w3.org/1999/html" *ngIf="index">
+  <mat-tab label="Home">
+    <h2>Hello {{person.firstName}} {{person.middleName}} {{person.lastName}}, Welcome to HR system!</h2>
+  </mat-tab>
+  <mat-tab label="Personal Information">
+    <div class="masonry">
+    <div class="personal-info">
+
+
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 class="text" style="margin-left: 12px;">Personal Info</h2>
+      <app-personal-information [index]="index"></app-personal-information>
+    </div>
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 style="margin-left: 12px;">Address</h2>
+      <app-address [index]="index"></app-address>
+    </div>
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 style="margin-left: 12px;">Contact Info</h2>
+      <app-contact [index]="index"></app-contact>
+    </div>
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 style="margin-left: 12px;">Employment</h2>
+      <app-employee [index]="index"></app-employee>
+    </div>
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 style="margin-left: 12px;">Emergence Contact</h2>
+      <app-emergency-contact [index]="index"></app-emergency-contact>
+    </div>
+
+
+    <div class="example-large-box mat-elevation-z4 item">
+      <h2 style="margin-left: 12px;">Document</h2>
+      <app-upload-details [index]="index"></app-upload-details>
+
+    </div>
+    </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="Visa Status Management">
+    <app-employee-visa-page [id]="employeeId"></app-employee-visa-page>
+  </mat-tab>
+
+  <mat-tab label="Upload File">
+    <app-upload-page [id]="employeeId"></app-upload-page>
+  </mat-tab>
+
+
+</mat-tab-group>

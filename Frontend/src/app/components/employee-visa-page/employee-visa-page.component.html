@@ -1,0 +1,151 @@
+<div class="card container" *ngIf="visaInfor">
+  <div class="card-header">Name Section</div>
+  <div class="card-body">
+    <!-- <h5 class="card-title">Special title treatment</h5> -->
+    <div class="card-text">
+      <div class="row">
+        <div class="col-8">
+          <div class="row">
+            <div class="col-sm-6">
+              <h6 class="mb-0 fs-4">Current States</h6>
+            </div>
+            <div class="col-sm-6">
+              <div *ngIf="visaInfor.stageNum == 0" class="col-sm-6 text-secondary">
+                Get Strated
+              </div>
+              <div *ngIf="visaInfor.stageNum == 1" class="col-sm-6 text-secondary">
+                Opt Receipt Pending
+              </div>
+              <div *ngIf="visaInfor.stageNum == 2" class="col-sm-6 text-secondary">
+                Opt Receipt Approve
+              </div>
+              <div *ngIf="visaInfor.stageNum == 3" class="col-sm-6 text-secondary">
+                Opt EAD Card Pending
+              </div>
+              <div *ngIf="visaInfor.stageNum == 4" class="col-sm-6 text-secondary">
+                Opt EAD Card Approved
+              </div>
+              <div *ngIf="visaInfor.stageNum == 5" class="col-sm-6 text-secondary">
+                I-893 Pending
+              </div>
+              <div *ngIf="visaInfor.stageNum == 6" class="col-sm-6 text-secondary">
+                I-893 Approved and Signed
+              </div>
+              <div *ngIf="visaInfor.stageNum == 7" class="col-sm-6 text-secondary">
+                OPT STEM Receipt Pending
+              </div>
+              <div *ngIf="visaInfor.stageNum == 8" class="col-sm-6 text-secondary">
+                OPT STEM Receipt Approved
+              </div>
+              <div *ngIf="visaInfor.stageNum == 9" class="col-sm-6 text-secondary">
+                OPT STEM EAD Card Pending
+              </div>
+              <div *ngIf="visaInfor.stageNum == 10" class="col-sm-6 text-secondary">
+                OPT STEM EAD Card approved
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <h6 class="mb-0 fs-4">Next Step</h6>
+            </div>
+            <div class="col-sm-6">
+              <div *ngIf="visaInfor.stageNum == 0" class="col-sm-6 text-secondary">
+                Upload Opt Receipt
+              </div>
+              <div
+                *ngIf="visaInfor.stageNum % 2 == 1"
+                class="col-sm-6 text-secondary"
+              >
+                Waiting for HR
+              </div>
+              <div *ngIf="visaInfor.stageNum == 2" class="col-sm-6 text-secondary">
+                Upload Opt EAD Card
+              </div>
+              <div *ngIf="visaInfor.stageNum == 4 && dayLeft <= 100" class="col-sm-6 text-secondary">
+                Your EAD is almost expire Upload I-893
+              </div>
+              <div *ngIf="visaInfor.stageNum == 6" class="col-sm-6 text-secondary">
+                Update OPT STEM Receipt
+              </div>
+              <div *ngIf="visaInfor.stageNum == 8" class="col-sm-6 text-secondary">
+                Update OPT STEM EAD Card
+              </div>
+              <div *ngIf="visaInfor.stageNum == 10 || (visaInfor.stageNum == 4 && dayLeft > 100)" class="col-sm-6 text-secondary">
+                You are Allset
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <div class="row">
+            <li *ngFor="let item of visaInfor.files">
+            <a [href]="item.link" class="text-decoration-none">
+              {{ item.title }}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-download"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                ></path>
+                <path
+                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          </div>
+
+          <br>
+          <div *ngIf="visaInfor.comment">{{ visaInfor.comment }}</div>
+          <br>
+        </div>
+
+        <div class="col-4">
+          <div class="row">
+            <div *ngIf="visaInfor.stageNum % 2 == 0 && !(visaInfor.stageNum == 4 && dayLeft > 100) && visaInfor.stageNum <= 10" class="row">
+              <!-- <label for="formFileLg" class="form-label"
+                >Large file input example</label
+              > -->
+              <input
+                class="form-control form-control"
+                id="formFileLg"
+                type="file"
+                (change)="selectFile($event)"
+              />
+              <button
+                class="btn btn-primary"
+                [disabled]="!selectedFiles"
+                (click)="upload()"
+              >
+                Upload
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <!-- <div class="card-footer text-center">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Edit
+    </button>
+  </div> -->
+</div>

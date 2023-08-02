@@ -1,0 +1,36 @@
+<mat-card-title>Reference</mat-card-title>
+<mat-card>
+    <mat-card-title>Name</mat-card-title>
+    <mat-card-subtitle>{{contacts[0].name}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+    <mat-card-title>Email</mat-card-title>
+    <mat-card-subtitle>{{contacts[0].email}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+    <mat-card-title>Phone</mat-card-title>
+    <mat-card-subtitle>{{contacts[0].phone}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+    <mat-card-title>Relationship</mat-card-title>
+    <mat-card-subtitle>{{contacts[0].relationship}}</mat-card-subtitle>
+</mat-card>
+<mat-card-title>Emergency</mat-card-title>
+<div *ngFor="let contact of contacts.slice(1, contacts.length)">
+    <mat-card>
+        <mat-card-title>Name</mat-card-title>
+        <mat-card-subtitle>{{contact.name}}</mat-card-subtitle>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Email</mat-card-title>
+        <mat-card-subtitle>{{contact.email}}</mat-card-subtitle>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Phone</mat-card-title>
+        <mat-card-subtitle>{{contact.phone}}</mat-card-subtitle>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Relationship</mat-card-title>
+        <mat-card-subtitle>{{contact.relationship}}</mat-card-subtitle>
+    </mat-card>
+</div>

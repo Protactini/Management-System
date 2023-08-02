@@ -1,0 +1,71 @@
+<div class="cointainer">
+    <h4>Generate Token</h4>
+    <form #emailForm="ngForm" (ngSubmit)="generate(emailForm)">
+        <div class = "form-group">
+            <label for="email">Email address</label><br>
+            <input #email="ngModel" required type="text" name = "email" class="form-control" ngModel>
+            <div *ngIf = "email.touched && email.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit" style="color: yellow;" [disabled]="!emailForm.valid">Generate Token</button>
+    </form>
+</div>
+<pre></pre>
+
+<table mat-table
+       [dataSource]="dataSource" multiTemplateDataRows
+       class="mat-elevation-z8">
+  <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+
+  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+  <ng-container matColumnDef="expandedDetail">
+    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+           [@detailExpand]="element == expandedInfo ? 'expanded' : 'collapsed'">
+
+        <mat-tab-group class="tab-group">
+          <mat-tab label="Basic Information">
+            <app-hrhire-basic-info [person]="allInfo[element.num-1].person" [address]="allInfo[element.num-1].address"></app-hrhire-basic-info>
+          </mat-tab>
+          <mat-tab label="Car/Visa Information">
+            <app-hrhire-car-visa-info [visa]="allInfo[element.num-1].visaStatus" [employee]="allInfo[element.num-1].employee"></app-hrhire-car-visa-info>
+          </mat-tab>
+          <mat-tab label="Contact">
+            <app-hrhire-contact-info [contacts]="allInfo[element.num-1].contacts"></app-hrhire-contact-info>
+          </mat-tab>
+        </mat-tab-group>
+
+
+        <div class="comment" style="margin-left: 50px;">
+          <form class="example-form" >
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Leave a comment</mat-label>
+              <textarea #comment matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" (click)="addComment(element.num-1, comment.value)">Comment</button>
+          </form>
+        </div>
+
+        <div class="judge" style="margin-left: 50px; margin-top: 10px;" *ngIf="allInfo[element.num-1].applicationWorkFlow.status=='Pending'">
+          <button mat-raised-button color="primary" (click)="approve(element.num - 1)">Approve</button>
+          <button mat-raised-button color="warn" (click)="reject(element.num - 1)">Reject</button>
+        </div>
+        <div class="judge" style="margin-left: 50px; margin-top: 10px;" *ngIf="allInfo[element.num-1].applicationWorkFlow.status!='Pending'">
+            <h2>Application is {{allInfo[element.num-1].applicationWorkFlow.status}}!</h2>
+        </div>
+      </div>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
+      class="example-element-row"
+      [class.example-expanded-row]="expandedInfo === element"
+      (click)="expandedInfo = expandedInfo === element ? null : element">
+  </tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>

@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>Cell Phone</mat-card-title>
+  <mat-card-subtitle>{{person.cellPhone}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Work Phone</mat-card-title>
+  <mat-card-subtitle>{{person.alternatePhone}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Personal Email</mat-card-title>
+  <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
+</mat-card>
+<mat-card>
+  <mat-card-title>Work Email</mat-card-title>
+  <mat-card-subtitle>{{person.email}}</mat-card-subtitle>
+</mat-card>
+<button mat-raised-button color="primary" class="btn" (click)="openDialog()" style="margin-left: 80px">Edit</button>

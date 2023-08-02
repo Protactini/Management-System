@@ -1,0 +1,27 @@
+<form  [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="hidden" formControlName="id" placeholder="{{data.id}}" name="id" id="id">
+  </div>
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" formControlName="name" value="{{data.name}}" placeholder="{{data.name}}" name="name" id="name">
+  </div>
+  <div class="form-group">
+    <label>Relationship:</label>
+    <input type="text" formControlName="relationship" value="{{data.relationship}}" placeholder="{{data.relationship}}" name="relationship" id="relationship">
+  </div>
+  <div class="form-group">
+    <label>Phone:</label>
+    <input type="text" formControlName="phone" value="{{data.phone}}" placeholder="{{data.phone}}" name="phone" id="phone">
+  </div>
+  <div class="form-group">
+    <label>Email:</label>
+    <input type="text" formControlName="email" value="{{data.email}}" placeholder="{{data.email}}" name="email" id="email">
+  </div>
+
+  <br/>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button  cdkFocusInitial>Done</button>
+  </div>
+</form>

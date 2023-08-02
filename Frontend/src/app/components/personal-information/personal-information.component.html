@@ -1,0 +1,36 @@
+<!--<mat-list role="list">-->
+<!--  <mat-list-item role="listitem"><span>Full Name: </span>{{person[0].fullName}}</mat-list-item>-->
+<!--  <mat-list-item role="listitem"><span>Preferred Name: </span>{{person[0].preferredName}}</mat-list-item>-->
+<!--  <mat-list-item role="listitem"><span>Date of Birth: </span>{{person[0].dob}}</mat-list-item>-->
+<!--  <mat-list-item role="listitem"><span>Age: </span>{{person[0].age}}</mat-list-item>-->
+<!--  <mat-list-item role="listitem"><span>Gender: </span>{{person[0].gender}}</mat-list-item>-->
+<!--  <mat-list-item role="listitem"><span>SSN: </span>****{{person[0].ssn.slice(-4)}}</mat-list-item>-->
+<!--</mat-list>-->
+
+
+  <mat-card>
+    <mat-card-title>First Name</mat-card-title>
+    <mat-card-subtitle>{{person.firstName}}</mat-card-subtitle>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Middle Name</mat-card-title>
+    <mat-card-subtitle>{{person.middleName}}</mat-card-subtitle>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Last Name</mat-card-title>
+    <mat-card-subtitle>{{person.lastName}}</mat-card-subtitle>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Date of Birth</mat-card-title>
+    <mat-card-subtitle>{{person.dob}}</mat-card-subtitle>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>Gender</mat-card-title>
+    <mat-card-subtitle>{{person.gender}}</mat-card-subtitle>
+  </mat-card>
+  <mat-card>
+    <mat-card-title>SSN</mat-card-title>
+<!--    <mat-card-subtitle>****{{person[index].ssn.slice(-4)}}</mat-card-subtitle>-->
+    <mat-card-subtitle>{{person.ssn}}</mat-card-subtitle>
+  </mat-card>
+<button mat-raised-button color="primary" class="btn" (click)="openDialog()" style="margin-left: 80px" value="edit">Edit</button>

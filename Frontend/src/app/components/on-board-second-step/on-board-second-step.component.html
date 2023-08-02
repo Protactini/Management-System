@@ -1,0 +1,116 @@
+<div class="cointainer">
+    <h3>Car Information</h3>
+    <form #car="ngForm" (ngSubmit)="submit(car)">
+        <div class = "form-group">
+            <label for="maker">Maker</label><br>
+            <input #maker="ngModel" required type="text" name = "maker" class="form-control" [(ngModel)]="employee.car.split('_')[0]" ngModel>
+            <div *ngIf = "maker.touched && maker.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="model">Model</label><br>
+            <input #model="ngModel" required type="text" name = "model" class="form-control" [(ngModel)]="employee.car.split('_')[1]" ngModel>
+            <div *ngIf = "model.touched && model.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="color">Color</label><br>
+            <input #color="ngModel" required type="text" name = "color" class="form-control" [(ngModel)]="employee.car.split('_')[2]" ngModel>
+            <div *ngIf = "color.touched && color.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label>Do you have a drive license?</label>
+            <input #check="ngModel" type="checkbox" name="check" [(ngModel)]="employee.dl" ngModel>
+        </div>
+        <pre></pre>
+        <div class = "form-group" *ngIf="check.value == true">
+            <div class = "form-group">
+                <label for="driverlicense">Drive License Number</label><br>
+                <input #driverlicense="ngModel" required type="text" name = "driverlicense" class="form-control" ngModel>
+                <div *ngIf = "driverlicense.touched && driverlicense.invalid" class="alert alert-danger">Cannot be empty</div>
+            </div>
+            <div class = "form-group">
+                <label for="expdate">Expiration Date</label><br>
+                <input #expdate="ngModel" required type="date" name = "expdate" class="form-control" [(ngModel)]="employee.dlExpirationDate" ngModel>
+                <div *ngIf = "expdate.touched && expdate.invalid" class="alert alert-danger">Cannot be empty</div>
+            </div>
+            <pre></pre>
+            <label for="formFileDL">Upload your driver license</label>
+            <input
+                class="form-control form-control-lg"
+                id="formFileDL"
+                type="file"
+                (change)="selectDL($event)"
+            />
+        </div>
+        <pre></pre>
+        <label for="formFileA">Upload your avartar</label>
+        <input
+            class="form-control form-control-lg"
+            id="formFileA"
+            type="file"
+            (change)="selectAvartar($event)"
+        />
+        <pre></pre>
+        <div class = "form-group">
+            <label for="startDate">Work Start Date</label><br>
+            <input #startDate="ngModel" required type="date" name = "startDate" class="form-control" [(ngModel)]="employee.startDate" ngModel>
+            <div *ngIf = "startDate.touched && startDate.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <pre></pre>
+        <div class = "form-group">
+            <label for="endDate">Work End Date</label><br>
+            <input #endDate="ngModel" type="date" name = "endDate" class="form-control" [(ngModel)]="employee.endDate" ngModel>
+        </div>
+        <pre></pre>
+        <br>
+        <h3>Visa Information</h3>
+        <div class = "form-group">
+            <label>Are you a citizen or permanent resident of the U.S?</label>
+            <input #isresident="ngModel" type="checkbox" name="isresident" ngModel>
+        </div>
+        <pre></pre>
+        <div class = "form-group" *ngIf="isresident.value == true">
+            <label for="citizenship">Citizenship</label><br>
+            <select #visatype="ngModel" name = "visatype" class="form-control" [(ngModel)]="visaStatus.visaType" ngModel>
+                <option value="Green Card">Green Card</option>
+                <option value="Citizen">Citizen</option>
+            </select>
+            <div *ngIf = "visatype.touched && visatype.invalid" class="alert alert-danger">Cannot be empty</div>
+        </div>
+        <div class = "form-group" *ngIf="isresident.value == false">
+            <div class = "form-group">
+                <label for="visa">What is your work authorization?</label><br>
+                <select #visatype="ngModel" name = "visatype" class="form-control" [(ngModel)]="visaStatus.visaType" ngModel>
+                    <option value="H1-B">H1-B</option>
+                    <option value="L2">L2</option>
+                    <option value="F1(CPT/OPT)">F1(CPT/OPT)</option>
+                    <option value="H4">H4</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div *ngIf = "visatype.touched && visatype.invalid" class="alert alert-danger">Cannot be empty</div>
+            </div>
+            <div class = "form-group">
+                <label for="startdate">Start Date</label><br>
+                <input #startdate="ngModel" required type="date" name = "startdate" class="form-control" [(ngModel)]="visaStatus.visaStartDate" ngModel>
+                <div *ngIf = "startdate.touched && startdate.invalid" class="alert alert-danger">Cannot be empty</div>
+            </div>
+            <div class = "form-group">
+                <label for="enddate">Expiration Date</label><br>
+                <input #enddate="ngModel" required type="date" name = "enddate" class="form-control" [(ngModel)]="visaStatus.visaEndDate" ngModel>
+                <div *ngIf = "enddate.touched && enddate.invalid" class="alert alert-danger">Cannot be empty</div>
+            </div>
+        </div>
+        <pre></pre>
+        <label for="formFileVisa">Upload your visa</label>
+        <input
+                class="form-control form-control-lg"
+                id="formFileVisa"
+                type="file"
+                (change)="selectVisa($event)"
+              />
+        <pre></pre>
+        <button class="btn btn-primary" type="submit" [disabled]="!car.valid">Submit</button>
+    </form>
+</div>
